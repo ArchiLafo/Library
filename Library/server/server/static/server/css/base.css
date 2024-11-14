@@ -1,0 +1,215 @@
+.body_main {
+    display: flex;
+    flex-direction: column;
+    background-color: #F4F4F4;
+}
+
+.header_main {
+    min-height: 455px;
+    background: url(../img/Shapka.png);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+}
+
+.button_wrap {
+    border: 1px solid #740F85;
+    position: absolute;
+    width: 230px;
+    height: 300px;
+    background-color: #C39ADC;
+    box-sizing: border-box;
+    padding: 15px 22px;
+    top: 170px;
+    left: 1030px;
+    border-radius: 60px;
+}
+.button_name {
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 80px;
+    padding: 0.1 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0.4px 0 solid #000000;
+}
+.еntry_and_exit {
+    font-family: 'Viaoda Libre';
+    border: 1px solid #740F85;
+    background-color: #C39ADC;
+    color: #000000;
+    border-radius: 60px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 25px;
+    margin: 0 15px 15px 0;
+
+}
+.еntry_and_exit1 {
+    font-family: 'Viaoda Libre';
+    border: 1px solid #740F85;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 60px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 25px;
+    margin: 0 15px 15px 0;
+
+}
+.еntry_and_exit:hover {
+    color: #ffffff;
+    background-color: #610A70;
+}
+
+.main_wrap {
+    width: 1250px;
+    min-height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main_wrap::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.library_name_wrap {
+    border: 1px solid #740F85;
+    position: absolute;
+    width: 270px;
+    height: 300px;
+    background-color: #C39ADC;
+    box-sizing: border-box;
+    padding: 82px 22px;
+    top: 170px;
+    border-radius: 60px;
+}
+
+.library_name_main {
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    margin: 0 0 24px 0;
+    text-shadow: 0.4px 0 solid #000000;
+}
+
+.library_name_text {
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+.content_main {
+    background: #DAB9E4;
+    flex-shrink: 1;
+}
+
+.content_left {
+    width: 270px;
+    float: left;
+    margin-top: 20px;
+}
+
+.content_right {
+    width: 750px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px
+}
+
+.content_right_header {
+    line-height: 78px;
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 22px;
+    text-transform: uppercase;
+    background: #f8f8f8;
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+.content_right_product::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.product_unit {
+    display: block;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #f8f8f8;
+    float: left;
+    width: 230px;
+    height: 340px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.product_unit img {
+    height: 290px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.product_unit:nth-child(3n) {
+    margin-right: 0;
+}
+
+.product_unit_name {
+    float: left;
+    width: 150px;
+    color: #333333;
+    font-family: 'Viaoda Libre', sans-serif;
+    font-size: 14px;
+    max-height: 2.4em;
+    overflow: hidden;
+}
+
+.categories_unit {
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    background-color: #F8F8F8;
+    float: left;
+    width: 230px;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.categories_unit_name {
+    float: left;
+    width: 220px;
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 20px;
+    max-height: 2.4em;
+    overflow: hidden;
+    text-align: center;
+}
+

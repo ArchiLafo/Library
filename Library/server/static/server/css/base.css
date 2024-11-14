@@ -1,0 +1,187 @@
+
+.body_main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_main {
+    min-height: 700px;
+    background: url(../img/Shapka.png);
+    background-size: 1250px;
+}
+
+
+.main_wrap {
+    width: 1170px;
+    min-height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main_wrap::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.library_name_wrap {
+    position: absolute;
+    width: 270px;
+    height: 300px;
+    background-color: #C39ADC;
+    box-sizing: border-box;
+    padding: 82px 22px;
+    top: 336px;
+}
+
+.library_name_main {
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    margin: 0 0 24px 0;
+    text-shadow: 0.4px 0 solid #000000;
+}
+
+.library_name_text {
+    color: #333333;
+    font-family: 'Viaoda Libre';
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+.content_main {
+    flex-shrink: 1;
+    background-color: #DAB9E4;
+}
+
+.content_left {
+    width: 270px;
+    float: left;
+}
+
+.content_right {
+    width: 870px;
+    float: right;
+    margin-top: -20px;
+}
+
+.content_right_header {
+    line-height: 78px;
+    color: #707070;
+    font-family: 'Viaoda Libre', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    background: #f8f8f8;
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+.content_right_product::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.product_unit {
+    display: block;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #f8f8f8;
+    float: left;
+    width: 230px;
+    height: 320px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.product_unit img {
+    height: 235px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.product_unit:nth-child(3n) {
+    margin-right: 0;
+}
+
+.product_unit_name {
+    float: left;
+    width: 150px;
+    color: #333333;
+    font-family: 'Viaoda Libre', sans-serif;
+    font-size: 14px;
+    max-height: 2.4em;
+    overflow: hidden;
+}
+
+.footer_content {
+    min-height: 300px;
+    flex-shrink: 0;
+    background-color: #373737;
+    color: #ffffff;
+}
+
+.footer_content_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 75px;
+}
+
+.column_head {
+    font-family: 'Viaoda Libre', sans-serif;
+    font-size: 18px;
+}
+
+.column_link {
+    padding-top: 28px;
+    box-sizing: border-box;
+}
+
+.column_link a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Viaoda Libre', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.footer_copyrights {
+    min-height: 50px;
+    flex-shrink: 0;
+    background-color: #333333;
+    color: #dad9d9;
+    line-height: 47px;
+}
+
+.footer_copyrights_text {
+    float: left;
+    font-family:'Viaoda Libre', sans-serif;
+    font-size: 12px;
+}
+
+.footer_copyrights_social {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 178px;
+    padding-right: 20px;
+}
+
+.footer_copyrights_social a {
+    text-decoration: none;
+}
+
+.footer_copyrights_social i {
+    color: #dad9d9;
+}
+

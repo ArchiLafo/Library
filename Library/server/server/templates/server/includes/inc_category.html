@@ -1,0 +1,8 @@
+{% load staticfiles %}
+
+<a href="{% url 'categories:detail' pk=id %}"
+   class="categories_unit">
+    <div class="categories_unit_name">
+        {{ name }}
+    </div>
+</a>

@@ -1,0 +1,27 @@
+.social_buttons_wrap {
+    height: 150px;
+    display: flex;
+}
+
+.social_buttons_wrap a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/3);
+    height: inherit;
+    text-decoration: none;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.social_buttons_wrap a:nth-child(1) {
+    background-color: #3b5997;
+}
+
+.social_buttons_wrap a:nth-child(2) {
+    background-color: #3fccfd;
+}
+
+.social_buttons_wrap a:nth-child(3) {
+    background-color: #cb2027;
+}

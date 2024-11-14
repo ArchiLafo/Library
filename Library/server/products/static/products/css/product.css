@@ -1,0 +1,69 @@
+.product_img_and_short_description::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.product_short_description_wrap {
+    float: right;
+    width: 510px;
+}
+.category_short_description_wrap {
+    float: right;
+    width: 750px;
+}
+.book_image {
+    width: 180px;
+    border: #C39ADC solid 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+.book_image:hover {
+    border-color: transparent;
+}
+
+.product_header {
+    color: black;
+    font-size: 18px;
+    font-weight: 40px;
+    background: #EAEAEA;
+}
+
+.product_short_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+
+.product_short_description::first-letter,
+.product_full_description::first-letter,
+.product_additional_description::first-letter,
+.product_features::first-letter, {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Viaoda Libre';
+}
+
+.button{
+    font-family: 'Viaoda Libre';
+    border: 1px solid #740F85;
+    background-color: #C39ADC;
+    color: #000000;
+    border-radius: 60px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 25px;
+    margin: 0 15px 10px 0;
+}
+.button:hover {
+    color: #ffffff;
+    background-color: #610A70;
+}

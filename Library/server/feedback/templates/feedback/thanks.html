@@ -1,0 +1,8 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+{% block title %}Thanks{% endblock %}
+{% block content_right %}
+{% block body %}
+<h1>Спасибо за вопрос! Скоро ответ придёт вам на указанную почту</h1>
+<p><a href="{% url 'feedback:feedback' %}">Вернуться назад</a></p>
+{% endblock %}

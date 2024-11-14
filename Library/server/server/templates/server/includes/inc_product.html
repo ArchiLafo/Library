@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<a href="{% url 'products:detail' pk=id %}"
+   class="product_unit
+          {% if status == 'new' %}product_unit_new{% endif %}
+          {% if status == 'hot' %}product_unit_hot{% endif %}">
+    <div class="product_unit_name">
+        {{ name }}
+    </div>
+    {% if image %}
+        <img src="{{ image.url }}" alt={{ name }}>
+    {% else %}
+        <img src="/media/products_images/default.png" alt={{ name }}>
+    {% endif %}
+</a>

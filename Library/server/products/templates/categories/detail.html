@@ -1,0 +1,39 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        {{ object.name }}
+    </div>
+    <div class="product_img_and_short_description">
+        <div class="category_short_description_wrap">
+            <h2 class="product_header">Описание категории</h2>
+            <p class="product_short_description">
+                {{ object.description|safe }}
+            </p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="content_right_header">
+        Книга из категории "{{ object.name }}"
+    </div>
+    <div class="content_right_product">
+        {# Вместо object.product_set.all используем object.category.all, т.к. #}
+        {# в модели Product в поле category стоит related_name='category' #}
+        {% for product in page_object %}
+            {% include 'server/includes/inc_product.html' with id=product.id status=product.status image=product.image name=product.name  %}
+        {% endfor %}
+    </div>
+    <div class="role">
+            {%  if user.is_staff   %}
+                <a class="button" href="{% url 'categories:update' object.pk %}">
+                Редактировать категорию
+                </a>
+                <a class="button" href="{% url 'categories:delete' object.pk %}">
+                Удалить категорию
+                </a>
+            {% endif %}
+    </div>
+{% endblock %}

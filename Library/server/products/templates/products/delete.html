@@ -1,0 +1,15 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Удаление книги "{{ object.name }}"
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <span><a style="color: #333333; font-family: 'Viaoda Libre'; font-size: 21px; font-weight: 400; font-style: normal; line-height: 20px; letter-spacing: 0.05em;">
+            Книга "{{ object.name }}" будет удален без возможности его восстановления. Удалить книгу?</span>
+        <br>
+        <input class="button" type="submit">
+    </form>
+{% endblock %}

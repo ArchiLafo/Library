@@ -1,0 +1,31 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Новинки
+    </div>
+    <div class="content_right_product">
+        {% for _ in ''|rjust:1 %}
+            {% for product in obj %}
+                {% if product.status == 'new' %}
+                    {% include 'server/includes/inc_product.html' with id=product.id status=product.status image=product.image name=product.name %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="content_right_header">
+        Рекомендуемое
+    </div>
+    <div class="content_right_product">
+        {% for _ in ''|rjust:1 %}
+            {% for product in obj %}
+                {% if product.status == 'hot' %}
+                    {% include 'server/includes/inc_product.html' with id=product.id status=product.status image=product.image name=product.name %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

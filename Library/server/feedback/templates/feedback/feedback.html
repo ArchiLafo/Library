@@ -1,0 +1,18 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Информация о нас
+    </div>
+    <p>
+        <strong>Адрес: </strong>Красноярск, ИКИТ<br>
+        <strong>Телефон: </strong> +7 (391) 212 07 69 <br>
+        <strong>Email: </strong>IKIT@gmail.com<br>
+    </p>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa9730676e0899ac74e35749b3188c0cbd530ef20954e40b92d546d8ef631e086&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+    <fieldset>
+        <legend>Спросите нас</legend>
+            {% include 'server/includes/inc_form.html' with form=form %}
+    </fieldset>
+{% endblock %}

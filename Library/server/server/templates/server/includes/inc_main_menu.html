@@ -1,0 +1,29 @@
+<div class="menu_wrap">
+    <div class="menu_wrap_text">Меню</div>
+    <ul>
+        <li><a href="{% url 'main:main' %}">Главная страница</a></li>
+        <li><a href="{% url 'products:main' %}">Каталог книг</a>
+            <ul>
+                <li><a href="{% url 'categories:main' %}">Все категории</a></li>
+                {% for category in menu %}
+                <li><a href="{% url 'categories:detail' pk=category.id %}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li><a href="{% url 'feedback:feedback' %}">Связь с нами</a></li>
+        <div class="role">
+                        <li>
+                            {%  if user.is_staff  %}
+                                <a href="{% url 'products:create' %}"
+                            style="color: rgb(0,0,0); font-weight:700; text-transofrm: uppercase; ">
+                                Добавить книгу
+                                </a>
+                                 <a href="{% url 'categories:create' %}"
+                            style="color: rgb(0,0,0); font-weight:700; text-transofrm: uppercase; ">
+                                Добавить категорию
+                                </a>
+                            {% endif %}
+                        </li>
+        </div>
+    </ul>
+</div>

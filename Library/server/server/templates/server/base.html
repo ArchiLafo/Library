@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+    {% block head %}
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                {% block title %}
+                    {{ title|title }}
+                {% endblock %}
+            </title>
+
+            {% block css %}
+                <link rel="stylesheet" href="{% static 'server/css/base.css' %}">
+                <link rel="stylesheet" href="{% static 'server/css/menu.css' %}">
+
+                <link rel="stylesheet" href="{% static 'server/css/script.css' %}">
+
+
+                {% for link in link_list %}
+                    {% if link != '' %}
+                        <link rel="stylesheet" href="{% static link %}">
+                    {% endif %}
+                {% endfor %}
+            {% endblock %}
+
+
+        </head>
+    {% endblock %}
+
+    {% block body %}
+        <body class="body_main">
+            {% block header_main %}
+                <div class="header_main">
+                    <div class="main_wrap">
+                        <div class="library_name_wrap">
+                            <div class="library_name_main">
+                                Книжная полка
+                            </div>
+                            <div class="library_name_text">
+                                Добро пожаловать в интернет библиотеку
+                            </div>
+                        </div>
+                        <div class="button_wrap">
+                            <div class="button_name">
+                                Твой аккаунт
+                            </div>
+                            {% if user.is_authenticated %}
+                                <a class="еntry_and_exit" href="{% url 'accounts:delete' %}">Удалить аккаунт</button></a>
+                            {% else %}
+                                <a class="еntry_and_exit" href="{% url 'accounts:register' %}">Регистрация</button></a>
+                            {% endif %}
+                            {% if user.is_authenticated %}
+                                <a class="еntry_and_exit" href="{% url 'favorites:list' %}">Избранные</button></a>
+                                <a class="еntry_and_exit" href="{% url 'accounts:logout' %}">Выход</button></a>
+                            {% else %}
+                                <a class="еntry_and_exit" href="{% url 'accounts:login' %}">Вход</button></a>
+                            {% endif %}
+                        </div>
+                </div>
+
+            {% endblock %}
+
+            <div class="content_main">
+                <div class="main_wrap">
+                    {% block content_left %}
+                        <div class="content_left">
+                            <div class="scroll-top-item" id="scrollTop" title="Вверх"><span>▲</span></div>
+                            {% include 'server/includes/inc_main_menu.html' %}
+                        </div>
+                    {% endblock %}
+                    <div class="content_right">
+                        {% block content_right %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+                <script type="text/javascript" src="{% static 'products/js/script.js' %}"></script>
+                <script type="text/javascript" src="{% static 'server/js/script.js' %}"></script>
+        </body>
+    {% endblock %}
+</html>

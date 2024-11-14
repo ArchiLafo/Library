@@ -1,0 +1,13 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Избранные книги
+    </div>
+    <div class="content_right_product">
+        {% for product in object_list1 %}
+            {% include 'server/includes/inc_product.html' with id=product.id status=product.status image=product.image name=product.name %}
+        {% endfor %}
+    </div>
+{% endblock %}

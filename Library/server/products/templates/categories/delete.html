@@ -1,0 +1,15 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Удаление категории книг "{{ object.name }}"
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <span><a style="color: #333333; font-family: 'Viaoda Libre'; font-size: 21px; font-weight: 400; font-style: normal; line-height: 20px; letter-spacing: 0.05em;">
+            Категория "{{ object.name }}" будет удалена без возможности ее восстановления. Удалить категорию?</span>
+        <br>
+        <input class="button" type="submit">
+    </form>
+{% endblock %}

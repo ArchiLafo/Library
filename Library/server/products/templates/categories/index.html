@@ -1,0 +1,13 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Категории книг
+    </div>
+    <div class="content_right_product">
+        {% for category in object_list %}
+            {% include 'server/includes/inc_category.html' with id=category.id name=category.name %}
+        {% endfor %}
+    </div>
+{% endblock %}

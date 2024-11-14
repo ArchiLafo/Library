@@ -1,0 +1,16 @@
+{% extends 'server/base.html' %}
+{% load staticfiles %}
+
+{% block content_right %}
+    <div class="content_right_header">
+        Каталог книг
+    </div>
+    <div class="content_right_product">
+        {% for product in object_list %}
+            {% include 'server/includes/inc_product.html' with id=product.id status=product.status image=product.image name=product.name %}
+        {% endfor %}
+    </div>
+    {% include 'server/includes/inc_pagination.html' with page=page_obj paginator=paginator %}
+
+{% endblock %}
+
